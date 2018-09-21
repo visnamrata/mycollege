@@ -23,9 +23,10 @@ int SJF(int a[][100], int n)
 
 int display(int b[][100], int n)
 {
+	cout<<"Order of execution: \n";
 	for(int i=0;i<n; i++)
 	{
-		cout<<"\n"<<b[i][1]<<":  "<<b[i][0]; 
+		cout<<"\nProcess no "<<b[i][1]<<":  "<<b[i][0]; 
 	}
 }
 
