@@ -7,9 +7,7 @@ int main()
 	int pid = fork();
 	if(pid==0)
 	{
-		cout<<"Hello";
 		execlp("ps","ps2",nullptr);
-		cout<<"Hello2";
 	}
 	else
 	{
