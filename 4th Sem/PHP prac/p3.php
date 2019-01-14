@@ -4,6 +4,8 @@
 	<title>Practical 2</title>
 </head>
 <body>
+	<h1>Practical 3</h1>
+	<h4>Q. WAP to check whether the given number is prime or not.</h4>
 	<form action="" method="post">
 		<input type="number" name="n">
 		<input type="submit" name="btn" >
