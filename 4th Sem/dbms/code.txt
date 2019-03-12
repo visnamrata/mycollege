@@ -1,0 +1,30 @@
+create database practical;
+
+use practical;
+
+create table employee(
+ Eno         char(3)    primary key,
+ Ename     varchar(50)     NOT NULL,
+ Job_type  varchar(50)     NOT NULL,
+ Manager     char(3)               ,
+ Hire_date   date          NOT NULL,
+ Dno         int                   ,
+ Commision   Decimal(10,2)         ,
+ Salary      Decimal(7,2) NOT NULL          
+ );
+
+create table Department (
+ Dno      int    primary key,
+ Dname   varchar(50)   ,
+ Location varchar(50)  default 'New Delhi'
+ );
+
+
+---ADD this also-----
+alter table employee add constraint FOREIGN KEY(Manager) REFERENCES employee(Eno);
+
+alter table employee add constraint FOREIGN KEY(Dno) REFERENCES Department(Dno);
+
+INSERT INTO  Department  values(1, 'cs', 'delhi');
+INSERT INTO  Department  values(2, 'math', 'delhi');
+INSERT INTO  Department  values(3, 'english', 'delhi');
