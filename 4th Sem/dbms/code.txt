@@ -28,3 +28,31 @@ alter table employee add constraint FOREIGN KEY(Dno) REFERENCES Department(Dno);
 INSERT INTO  Department  values(1, 'cs', 'delhi');
 INSERT INTO  Department  values(2, 'math', 'delhi');
 INSERT INTO  Department  values(3, 'english', 'delhi');
+
+
+-- add employee data --------------
+
+ INSERT INTO employee VALUES('100','Ram', 'Manager', null, '1998-12-17', 1, 1000.22 , 20000.00);
+ INSERT INTO employee VALUES('101','Shyam', 'Worker', 100, '1997-2-7', 1, 800.22 , 15000.00);
+ INSERT INTO employee VALUES('102','Kunal', 'Worker', 100, '2000-10-17', 1, 100.32 , 13000.00);
+ INSERT INTO employee VALUES('103','Raman', 'Worker', 100, '1991-9-22', 1, 710.32 , 14500.00);
+ INSERT INTO employee VALUES('104','Rahul', 'Worker', 100, '2001-1-10', 1, 600.21 , 13200.00);
+
+ INSERT INTO employee VALUES('200','Rohit', 'Manager', null, '1991-11-7', 2, 990.28 , 19900.00);
+ INSERT INTO employee VALUES('201','Adi', 'Worker', 200, '2004-10-6', 2, 650.52 , 11000.00);
+ INSERT INTO employee VALUES('202','Gopal', 'Worker', 200, '2009-8-7', 2, 450.22 , 12000.00);
+ INSERT INTO employee VALUES('203','Atul', 'Worker', 200, '1995-10-22', 2, 760.52 , 14500.00);
+ INSERT INTO employee VALUES('204','Manjul', 'Worker', 200, '2011-4-10', 2, 680.21 , 13200.00);
+
+
+ INSERT INTO employee VALUES('300','Robin', 'Manager', null, '1998-12-17', 3, 690.28 , 19900.00);
+ INSERT INTO employee VALUES('301','Ashwin', 'Worker', 300, '1997-2-7', 3, 700.22 , 15000.00);
+ INSERT INTO employee VALUES('302','Satish', 'Worker', 300, '2000-10-17', 3, 170.32 , 12500.00);
+ INSERT INTO employee VALUES('303','Ranit', 'Worker', 300, '1991-9-22', 3, 610.32 , 11500.00);
+ INSERT INTO employee VALUES('304','Pooja', 'Worker', 300, '2001-1-10', 3, 400.21 , 12200.00);
+
+--  QUERY FOR PRACTICALS-------------------------
+
+1.  select eno,ename, Job_type, Hire_date from employee;
+2.  select DISTINCT job_type from employee;
+3.  
