@@ -55,6 +55,8 @@ INSERT INTO  Department  values(3, 'english', 'delhi');
  INSERT INTO `employee`(`Eno`, `Ename`, `Job_type`, `Manager`, `Hire_date`, `Dno`, `Commision`, `Salary`) VALUES ('105', 'shivam', 'Worker', null, '2005-04-24', 1, 750.44, 16500.00);
 
   INSERT INTO `employee`(`Eno`, `Ename`, `Job_type`, `Manager`, `Hire_date`, `Dno`, `Commision`, `Salary`) VALUES ('106', 'Anand', 'Worker', null, '2005-04-24', 1, 750.44, 16500.00);
+
+ INSERT INTO `employee`(`Eno`, `Ename`, `Job_type`, `Manager`, `Hire_date`, `Dno`, `Commision`, `Salary`) VALUES ('107', 'Raj', 'Worker', '100', '1991-03-30', 1,10514.00 , 10000.00);
 --  QUERY FOR PRACTICALS-------------------------
 
 1.  select eno,ename, Job_type, Hire_date 
@@ -121,8 +123,47 @@ INSERT INTO  Department  values(3, 'english', 'delhi');
 			and 
 		(dno=30 or manager='7788');
 
-15. 
+15. select ename, salary, commision 
+	from employee
+    where commision= (salary + salary*0.05 + 14);
 
 16. select now();
 
-17. 
+17. select DATE_ADD( now() ,INTERVAL 6 MONTH);
+		
+		//Can't able to calculate 1st monday 
+
+18.  select ename, ( datediff( now(), hire_date)/30) as time_spent 
+	 from employee;
+
+	 //any other method?
+	 //it calculate no. of days and divide by 30.
+
+19. SELECT CONCAT(ename, ' earns ', salary, ' monthly but wants ', 3*salary) 
+	from employee;
+
+20. select 
+	concat( upper(left(ename,1)) ,  lower( substring(ename, 2, length(ename)))  ) as ename,
+	if(left(ename,1)='j' or left(ename,1)='a' or left(ename, 1)='m', length(ename), 0) as len
+	from employee;
+
+21. select ename, hire_date, dayname(hire_date) as day  
+	from employee;
+
+22. select e.ename,d.dname, e.dno 
+	from employee as e, Department as d 
+	where e.dno=d.dno;
+
+23. select distinct Job_type 
+	from employee 
+	where dno=30;
+
+24. select e.ename, d.dname 
+    from employee as e, Department as d
+    where e.dno=d.dno and e.ename like "%a%";
+
+25. select e.ename, e.job_type, d.dno , d.dname 
+	from employee as e, Department as d 
+	where e.dno=d.dno and d.location='Dallas';
+
+26. 
