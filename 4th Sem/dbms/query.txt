@@ -108,11 +108,15 @@
 	from employee as e, Department as d 
 	where e.dno=d.dno and d.location='Dallas';
 
-26. 
+26. select e.ename, e.eno, m.ename as manager_name, m.eno as manager_eno 
+	from employee as e 
+		left join 
+	employee as m 
+	on e.manager=m.eno ;
 
-27. 
+27. -----------------------//question??----------------------------------------------
 
-28. 
+28. -----------------------//question??----------------------------------------------
 
 29. select max(salary), min(salary), sum(salary),avg(salary) 
 	from employee;
