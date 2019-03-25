@@ -8,16 +8,16 @@
 	from employee;
 
 3.  select concat_ws(
-						",", ename, job_type
-					) 
+		",", ename, job_type
+	) 
 		as  Employee_details from employee;
 
 4.  select concat_ws(
-						",",eno, ename, job_type, manager, hire_date, dno, commision, salary
-					) 
-			as  Employee_details from employee;
+		",",eno, ename, job_type, manager, hire_date, dno, commision, salary
+	)
+	as  Employee_details from employee;
 
-	-----------------------//can we do this query withou typing all column name-----------------------
+	-----------------------//can we do this query without typing all column name-----------------------
 
 5.  select ename, salary
 	from employee
@@ -71,14 +71,11 @@
 
 16. select now();
 
-17. select DATE_ADD( now() ,INTERVAL 6 MONTH);
-		
-	-----------------------//Can't able to calculate 1st monday -----------------------
+17. SELECT ADDDATE(date_add(hire_date, INTERVAL 6 month), INTERVAL (9-dayofweek(date_add(hire_date, INTERVAL 6 month))) DAY) as 1stMonday from employee;
 
 18.  select ename, ( datediff( now(), hire_date)/30) as time_spent 
 	 from employee;
 
-	 -----------------------//any other method?-----------------------
 	 //it calculate no. of days and divide by 30.
 
 19. SELECT CONCAT(ename, ' earns ', salary, ' monthly but wants ', 3*salary) 
@@ -116,7 +113,8 @@
 
 27. -----------------------//question??----------------------------------------------
 
-28. -----------------------//question??----------------------------------------------
+28. SELECT ename, REPEAT("*", salary/100) sas salary 
+	from employee;
 
 29. select max(salary), min(salary), sum(salary),avg(salary) 
 	from employee;
@@ -134,7 +132,9 @@
 	where e.dno=d.dno 
 	group by d.dno;
 
-33. -----------------------//question??----------------------------------------------
+33. select ename, hire_date 
+    from employee 
+    where dno = (select dno from employee where ename='Blake');
 
 34. select eno, ename
     from employee
@@ -152,7 +152,8 @@
 		d.ename<>e.ename
 	);
 
-36. -----------------------//question??----------------------------------------------
+36. select ename, salary from employee
+    where manager= (select eno from employee where ename='king');
 
 37. select d.dno, e.ename, e.job_type 
 	from employee as e, Department as d  
