@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Practical 1</title>
+	<title>Practical 10</title>
 	<style type="text/css">
 		.input {
 			padding: 10px;

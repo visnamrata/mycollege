@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Practical 6</title>
+	<title>Practical 15</title>
 </head>
 <body>
-	<h1>Practical 6</h1>
+	<h1>Practical 15</h1>
 	<h4>Q. Write a PHP script that checks whether a passed string is palindrome or not?</h4>
 	<form action="" method="post">
 		<input type="text" name="n">
@@ -18,7 +18,6 @@
 			$rev = "";
 			for($i=$l;$i>=0;$i--)
 			{
-				global $rev;
 				$rev = $rev.$n[$i];
 			}
 			if(strcmp($rev, $n))

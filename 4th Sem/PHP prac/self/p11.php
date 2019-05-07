@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Practical 2</title>
+	<title>Practical 11</title>
 </head>
 <body>
-	<h1>Practical 2</h1>
+	<h1>Practical 11</h1>
 	<h4>Q. Write a function to calculate the factorial of a number (non-negative integer). The function accept the number as an argument.</h4>
 	<form action="" method="post">
 		<input type="number" name="n">

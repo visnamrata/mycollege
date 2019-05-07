@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Practical 2</title>
+	<title>Practical 12</title>
 </head>
 <body>
-	<h1>Practical 3</h1>
+	<h1>Practical 12</h1>
 	<h4>Q. WAP to check whether the given number is prime or not.</h4>
 	<form action="" method="post">
 		<input type="number" name="n">
@@ -20,7 +20,7 @@
 			}
 			for($i=2;$i<$n;$i++)
 			{
-				global $t;
+				//global $t;
 				if($n%$i==0)
 					{
 						return 0;
