@@ -3,7 +3,7 @@
   - Operating System
   - Computer Network
   - Android
-## 1. **4<sup>th</sup> Semester**
+## 2. **4<sup>th</sup> Semester**
   - Database management system
   - PHP 
   - Design and analysis of algorithm
