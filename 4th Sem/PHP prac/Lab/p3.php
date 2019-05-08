@@ -49,11 +49,10 @@
 		if (isset($_POST['btnc'])) 
 		{
 			$str = $_POST['strC'];
-			$t1 = strtolower($str);
-			if($str==$t1)
-				echo "String is lowercase.";
-			else
-				echo "String is not lowercase.";
+			if (preg_match("/[A-Z]/", $str)) 
+		     	   print "all character are not Small!";
+		  	else
+		   	   print "all Small character!";
 			
 		}
 	?>
