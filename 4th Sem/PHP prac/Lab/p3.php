@@ -31,10 +31,10 @@
 			$s1 = $_POST['strB'];
 			$s2 = $_POST['searchB'];
 			echo "OUTPUT: ";
-			if (strpos($s1, $s2) >= 0 &&  strpos($s1, $s2) < strlen($s1)) 
-			    echo("True"); 
+			if (strpos($s1, $s2) !== false) 
+			    echo("Found"); 
 			else
-			    echo("False"); 
+			    echo("Not found"); 
 
 			
 		}
