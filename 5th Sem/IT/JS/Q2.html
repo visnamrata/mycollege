@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 2</title>
+	<script type="text/javascript">
+		default_username = "admin";
+		default_password = "1234";
+
+		function check()
+		{
+			var username = document.getElementById("username").value;
+			var password = document.getElementById('password').value;
+			// console.log(" "+username+ " " +password);
+			if( username=="")
+				alert("please give username");
+			else if(password=="")
+				alert("please give password");
+			else if(username==default_username && password==default_password)
+				document.getElementById('output').innerHTML = "Login Successfully";
+			else
+				document.getElementById('output').innerHTML = "Invalid Username/Password";
+		}
+	</script>
+</head>
+<body>
+<form>
+	Username: <input type="name" id="username" value="admin"><br>
+	Password: <input type="name" id="password" value="1234"><br>
+	<input type="button" onclick="check()" value="Submit">
+</form>
+<p id="output"></p>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<html>
+<head>
+	<script>
+		var finalOutput= "";
+		function checkName()
+		{
+			var name = document.forms["myform"]["name"].value;
+			if (name=="")
+			 alert("Name must be filled");
+			else
+			{
+				finalOutput += "<br>";
+				var temp=0;
+				for(i=0; i<name.length; i++)
+				{
+					// console.log("*"+i);
+					if(name.charCodeAt(i)<65 || (name.charCodeAt(i)>90 && name.charCodeAt(i)<97) || name.charCodeAt(i)>122)
+					{
+						temp++;
+						// console.log("temp");
+						break;
+					}	
+				}
+				if(temp>='1')
+					finalOutput += "Not Alphabetic Name";
+				else
+					finalOutput += "Alphabetic Name";
+			}
+		}
+		
+		function checkRoll()
+		{
+			var name = document.forms["myform"]["roll"].value;
+			if (name=="")
+			 alert("Roll no. must be filled");
+			else
+			{
+				var n = name.length;
+				if(n!='7')
+					finalOutput += "Roll no. length is not 7.";
+				else
+				{
+					var temp=0;
+					for(i=0; i<name.length; i++)
+					{
+						if(name.charCodeAt(i)<48 || name.charCodeAt(i)>57)
+						{
+							temp++;
+							// console.log("temp");
+							break;
+						}	
+					}
+					if(temp>='1')
+						finalOutput += "Wrong Roll no. (Can't be character)";
+					else
+						finalOutput += "Roll no. is a 7 digit number";			
+				}
+			}
+		}
+		
+		function checkDate()
+		{
+			finalOutput += "<br>";
+			var d = new Date(document.forms["myform"]["date"].value);
+			if (d=="")
+			 alert("date must be filled");
+			else
+			{
+				finalOutput+= d;
+			}
+		}
+		
+		function show()
+		{
+			console.log("hello"+finalOutput);
+			document.getElementById("output").innerHTML = finalOutput;
+		}
+
+		function check()
+		{
+			finalOutput = "";
+			checkRoll();
+			checkName();
+			checkDate();
+			// document.getElementById("output").innerHTML = "HELLO";
+			show();
+		}
+	</script>
+</head>
+<body>
+​
+	<form name="myform">
+		Name: <input type="text" name="name" value="asd" /><br>
+		Roll: <input type="text" name="roll" value="1122334" /><br>
+		DOB: <input type="date" name="date" value="2014-02-09"><br>
+		<input type="button" onclick="check()" value="submit" /><br>
+	</form>
+​
+	<p id="output">Output comes here</p>
+</body>
+</html>	
