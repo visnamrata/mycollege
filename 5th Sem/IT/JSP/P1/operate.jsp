@@ -8,11 +8,19 @@
         <title>JSP Page</title>
     </head>
     <body>
-       
+        
         <%  
            String n =  request.getParameter("n");
-           out.print("Input Given: "+n+"<br>");           
-        %>  
+           out.print("Input Given: "+n+"<br>");
+           out.print("<br>Using Scriplet Tags: <br>");
+           for(int i=0;i<Integer.parseInt(n);i++)
+           {
+               for(int j=0;j<=i;j++)
+                   out.print(j+1+" ");
+               out.print("<br>");
+           }
+           out.print("<br>Using 'c:forEach' loop: <br>");
+        %>
         <c:forEach var = "i" begin = "1" end ="${param.n}">
             <c:forEach var = "j" begin = "1" end ="${i}">
                 ${j}
