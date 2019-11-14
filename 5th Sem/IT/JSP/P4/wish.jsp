@@ -10,15 +10,15 @@
     <body>
        
         <%  
-           String n =  request.getParameter("calculate");
+           String name =  request.getParameter("uname");
            Date d = new Date();
            int hour = d.getHours();
            if( hour>=4 && hour<12)
-               out.print("Good Morning");           
+               out.print("Good Morning" + name);           
            else if( hour>=12 && hour<17)
-               out.print("Good Afternoon");
+               out.print("Good Afternoon" + name);
            if( hour>=17 && hour<20)
-               out.print("Good Evening");           
+               out.print("Good Evening" + name);           
         %>  
     </body>
 </html>
